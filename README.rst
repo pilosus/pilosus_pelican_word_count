@@ -1,3 +1,6 @@
+.. image:: https://travis-ci.org/pilosus/pilosus_pelican_word_count.svg?branch=master
+    :target: https://travis-ci.org/pilosus/pilosus_pelican_word_count
+
 `Pelican`_ plugin for word count and reading time statistics
 
 About
