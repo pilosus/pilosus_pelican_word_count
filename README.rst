@@ -1,11 +1,12 @@
-Word count and reading time statistics
-======================================
+`Pelican`_ plugin for word count and reading time statistics
 
-`Pelican`_ plugin that extends articles and pages with word count and
-reading time statistics.
+About
+-----
+
+Words are extracted and refined from the rendered ``HTML``.
 
 Reading time is in minutes and calculated assuming average reading
-speed equal to 250 words per minute.
+speed equal to ``250`` words per minute.
 
 
 Installation
