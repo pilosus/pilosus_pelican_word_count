@@ -1,7 +1,8 @@
-from pelican import generators, signals
-from bs4 import BeautifulSoup
-from string import punctuation
 from collections import Counter
+from string import punctuation
+
+from bs4 import BeautifulSoup
+from pelican import generators, signals
 
 #
 # Constants
@@ -13,6 +14,7 @@ WORDS_PER_MINUTE = 250
 # Functions
 #
 
+
 def process_generators(content_generators):
     """
     Process Article and Page generators
@@ -20,16 +22,15 @@ def process_generators(content_generators):
     for generator in content_generators:
         if isinstance(generator, generators.ArticlesGenerator):
             for article in (
-                    generator.articles +
-                    generator.translations +
-                    generator.drafts):
+                generator.articles + generator.translations + generator.drafts
+            ):
                 count_words(article)
         elif isinstance(generator, generators.PagesGenerator):
             for page in generator.pages:
                 count_words(page)
 
     return True
-    
+
 
 def count_words(item):
     """
@@ -49,6 +50,7 @@ def count_words(item):
 #
 # Entrypoint
 #
+
 
 def register():
     """
