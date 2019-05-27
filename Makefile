@@ -8,10 +8,10 @@ install:
 
 .PHONY: format
 format:
-	isort -rc -w 88 .
-	black -S -l 88 --target-version py37 .
+	isort
+	black -l 88 --target-version py37 .
 
 .PHONY: lint
 lint:
 	flake8 .
-	black -S -l 88 --target-version py37 --check .
+	black -l 88 --target-version py37 --check .

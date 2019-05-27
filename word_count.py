@@ -36,9 +36,9 @@ def count_words(item):
     """
     Add `stats` attribute with word count and rounded reading time in minutes
     """
-    text = BeautifulSoup(item.content, 'html.parser').getText()
+    text = BeautifulSoup(item.content, "html.parser").getText()
     words = text.split()
-    table = str.maketrans('', '', punctuation)
+    table = str.maketrans("", "", punctuation)
     stripped = [w.translate(table).lower() for w in words]
 
     word_count = sum(Counter(stripped).values())
